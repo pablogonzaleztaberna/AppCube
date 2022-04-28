@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InscribirseActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="1200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="448dp"
+        android:rotation="132"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hoja" />
+
+    <TextView
+        android:id="@+id/txtvInscribirse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/inscribirse"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/txtvIngrese"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/ingrese"
+        android:textAlignment="textStart"
+        android:textColor="#B3B3B3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvInscribirse" />
+
+    <TextView
+        android:id="@+id/txtvNombreInsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/nombre"
+        android:textColor="#9C9A9A"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvIngrese" />
+
+    <EditText
+        android:id="@+id/editTxtNombreInsc"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNombreInsc" />
+
+    <TextView
+        android:id="@+id/txtvContraInsc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/contra"
+        android:textColor="#9C9A9A"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtNombreInsc" />
+
+    <EditText
+        android:id="@+id/editTxtContraInsc1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvContraInsc1" />
+
+    <TextView
+        android:id="@+id/txtvContraInsc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/contra"
+        android:textColor="#9C9A9A"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtContraInsc1" />
+
+    <EditText
+        android:id="@+id/editTxtContraInsc2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvContraInsc2" />
+
+    <Button
+        android:id="@+id/btnRegistrarseInsc"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="#0066FF"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/registrarse"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtContraInsc2" />
+
+    <TextView
+        android:id="@+id/txtvTienesCuentaInsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/tienes_cuenta"
+        android:textColor="#9C9A9A"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarseInsc" />
+
+    <TextView
+        android:id="@+id/txtvRegistrarseInsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="102dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/registrarse"
+        android:textColor="#0055FF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarseInsc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

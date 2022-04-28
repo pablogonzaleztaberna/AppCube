@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true">
+
+    </ViewFlipper>
+
+    <Button
+        android:id="@+id/btnEmpezar"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:backgroundTint="#0A2CDC"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="irLogin"
+        android:text="@string/empezar"
+        android:textAllCaps="false"
+        android:textSize="16sp"></Button>
+
+    <TextView
+        android:id="@+id/txtvDescubre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="230dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layoutDirection="ltr"
+        android:text="@string/descubre"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/txtvImp"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="140dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/implementacion"
+        android:textAlignment="center"
+        android:textColor="#9C9A9A"
+        android:textSize="16sp"></TextView>
+
+
+</RelativeLayout>

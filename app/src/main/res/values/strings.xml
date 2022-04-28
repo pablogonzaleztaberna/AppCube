@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AppCube</string>
+    <string name="empezar">Empezar</string>
+    <string name="descubre">Descubre una nueva historia que te encantará</string>
+    <string name="implementacion">Implementación de tecnologías para almacenar datos inalterables en base a datos específicos.</string>
+    <string name="nombre">Nombre de usuario</string>
+    <string name="contra">Contraseña</string>
+    <string name="rest_contra">¿Se te olvidó tu contraseña?</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="no_cuenta">¿No tienes cuenta?</string>
+    <string name="inscribirse">Inscribirse</string>
+    <string name="google">Conéctate con Google</string>
+    <string name="facebook">Conéctate con Facebook</string>
+    <string name="restablecer">Restablecer la contraseña</string>
+    <string name="ingrese">Ingrese su dirección de correo electrónico en este campo para recuperar su contraseña.</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="tienes_cuenta">¿Ya tienes cuenta?</string>
+</resources>

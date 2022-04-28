@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestablecerActivity">
+
+    <TextView
+        android:id="@+id/txtvTienesCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/tienes_cuenta"
+        android:textColor="#9C9A9A"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarseRest" />
+
+    <TextView
+        android:id="@+id/txtvRegistrarseRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="102dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/registrarse"
+        android:textColor="#0055FF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarseRest" />
+
+    <TextView
+        android:id="@+id/txtvNombreRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/nombre"
+        android:textColor="#9C9A9A"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvIngrese" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="1200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="448dp"
+        android:rotation="132"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hoja" />
+
+    <TextView
+        android:id="@+id/txtvInscribirse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/restablecer"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/txtvIngrese"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/ingrese"
+        android:textAlignment="textStart"
+        android:textColor="#B3B3B3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvInscribirse" />
+
+    <EditText
+        android:id="@+id/editTxtNombreRest"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNombreRest" />
+
+    <Button
+        android:id="@+id/btnRegistrarseRest"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="#0066FF"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/registrarse"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtNombreRest" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
