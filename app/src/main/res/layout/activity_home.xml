@@ -53,4 +53,55 @@
         android:textColor="#BC4949"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imgvAmigos"
+        android:layout_width="45dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/buscar" />
+
+    <ImageView
+        android:id="@+id/imgvPerfil"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgvAmigos"
+        app:srcCompat="@drawable/usuario" />
+
+    <ImageView
+        android:id="@+id/imgvMensajes"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgvAjustes"
+        app:srcCompat="@drawable/mensaje" />
+
+    <ImageView
+        android:id="@+id/imgvAjustes"
+        android:layout_width="50dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ajustes" />
+
+    <ImageView
+        android:id="@+id/imgvMas"
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgvMensajes"
+        app:layout_constraintStart_toEndOf="@+id/imgvPerfil"
+        app:srcCompat="@drawable/mas" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
