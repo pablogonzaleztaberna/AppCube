@@ -6,13 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:background="#E9F6EDED"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="Buscar..."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/txtvCuentos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="Cuentos"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/cuentos"
             android:textColor="#000000"
             android:textSize="48sp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imagevUsuario"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/user"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/txtvVerTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="95dp"
+            android:layout_marginEnd="20dp"
+            android:text="Ver todo"
+            android:textColor="#BC4949"
+            android:textSize="16sp" />
+
 </RelativeLayout>

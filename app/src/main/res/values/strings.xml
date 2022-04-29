@@ -15,4 +15,9 @@
     <string name="ingrese">Ingrese su dirección de correo electrónico en este campo para recuperar su contraseña.</string>
     <string name="registrarse">Registrarse</string>
     <string name="tienes_cuenta">¿Ya tienes cuenta?</string>
+    <string name="perfil">Perfil</string>
+    <string name="cuentos">Cuentos</string>
+    <string name="mensajes">Mensajes</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="amigos">Amigos</string>
 </resources>
