@@ -1,107 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="16dp"
-        android:background="#E9F6EDED"
-        android:iconifiedByDefault="false"
-        android:queryBackground="@android:color/transparent"
-        android:queryHint="Buscar..."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation">
+    </FrameLayout>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        app:itemIconSize="40dp"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="#000000"
+        app:menu="@menu/bottom_navigation" />
 
-    <TextView
-        android:id="@+id/txtvCuentos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="2dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Cuentos"
-        android:textColor="#000000"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/txtvTodo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="18dp"
-        android:text="Ver todo"
-        android:textColor="#BC4949"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/imgvAmigos"
-        android:layout_width="45dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/buscar" />
-
-    <ImageView
-        android:id="@+id/imgvPerfil"
-        android:layout_width="50dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgvAmigos"
-        app:srcCompat="@drawable/usuario" />
-
-    <ImageView
-        android:id="@+id/imgvMensajes"
-        android:layout_width="50dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imgvAjustes"
-        app:srcCompat="@drawable/mensaje" />
-
-    <ImageView
-        android:id="@+id/imgvAjustes"
-        android:layout_width="50dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ajustes" />
-
-    <ImageView
-        android:id="@+id/imgvMas"
-        android:layout_width="70dp"
-        android:layout_height="90dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imgvMensajes"
-        app:layout_constraintStart_toEndOf="@+id/imgvPerfil"
-        app:srcCompat="@drawable/mas" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
