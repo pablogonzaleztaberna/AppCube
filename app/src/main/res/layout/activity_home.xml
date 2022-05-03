@@ -21,6 +21,7 @@
         app:itemIconSize="40dp"
         app:itemIconTint="@color/black"
         app:itemTextColor="#000000"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_navigation" />
 
 </RelativeLayout>
