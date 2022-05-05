@@ -13,11 +13,13 @@
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_restablecer.xml" value="0.22" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_ajustes.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_buscar.xml" value="0.21" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_chat.xml" value="0.13949275362318841" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_chat.xml" value="0.17" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_cuentos.xml" value="0.18" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_home.xml" value="0.13949275362318841" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_amigos.xml" value="0.21" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_amigos_conectados.xml" value="0.21" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_mensajes.xml" value="0.21" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/menu/bottom_navigation.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1715" />
