@@ -3,6 +3,7 @@ package com.example.appcube;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ public class AdaptadorMensaje extends RecyclerView.Adapter<AdaptadorMensaje.Mens
 
     @Override
     public void onBindViewHolder(@NonNull AdaptadorMensaje.MensajeViewHolder holder, int position) {
+        holder.foto.setImageResource(listaMensajes.get(position).getFoto());
         holder.nombre.setText(listaMensajes.get(position).getNombre());
         holder.mensaje.setText(listaMensajes.get(position).getMensaje());
         holder.hora.setText(listaMensajes.get(position).getHora());
@@ -40,11 +42,13 @@ public class AdaptadorMensaje extends RecyclerView.Adapter<AdaptadorMensaje.Mens
 
     public class MensajeViewHolder extends RecyclerView.ViewHolder {
 
+        ImageView foto;
         TextView nombre, mensaje, hora, numMensajes;
 
         public MensajeViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            foto = (ImageView) itemView.findViewById(R.id.imgv);
             nombre = (TextView) itemView.findViewById(R.id.nombre);
             mensaje = (TextView) itemView.findViewById(R.id.mensaje);
             hora = (TextView) itemView.findViewById(R.id.hora);

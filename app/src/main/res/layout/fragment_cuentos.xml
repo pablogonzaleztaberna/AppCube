@@ -52,4 +52,11 @@
             android:textColor="#BC4949"
             android:textSize="16sp" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerResumenes"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/txtvCuentos"
+            android:layout_marginTop="15dp" />
+
 </RelativeLayout>

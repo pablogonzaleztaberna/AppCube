@@ -2,6 +2,7 @@ package com.example.appcube;
 
 public class Mensaje {
 
+    private int foto;
     private String nombre;
     private String mensaje;
     private String hora;
@@ -10,17 +11,27 @@ public class Mensaje {
     public Mensaje() {
     }
 
-    public Mensaje(String nombre, String mensaje, String hora, String numMensajes) {
+    public Mensaje(int foto, String nombre, String mensaje, String hora, String numMensajes) {
+        this.foto = foto;
         this.nombre = nombre;
         this.mensaje = mensaje;
         this.hora = hora;
         this.numMensajes = numMensajes;
     }
 
-    public Mensaje(String nombre, String mensaje, String hora) {
+    public Mensaje(int foto, String nombre, String mensaje, String hora) {
+        this.foto = foto;
         this.nombre = nombre;
         this.mensaje = mensaje;
         this.hora = hora;
+    }
+
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
     }
 
     public String getNombre() {

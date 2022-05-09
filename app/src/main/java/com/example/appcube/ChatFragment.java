@@ -100,16 +100,16 @@ public class ChatFragment extends Fragment {
     }
 
     private void llenarListaMensajes() {
-        listaMensajes.add(new Mensaje("Hurin Seary", "¿Qué tal cómo estás?", "15:41", "3"));
-        listaMensajes.add(new Mensaje("Víctor Exrixón", "¿Qué tal cómo estás?", "15:41", "3"));
-        listaMensajes.add(new Mensaje("surfiya zakir", "¿Qué tal cómo estás?", "Ayer", "1"));
-        listaMensajes.add(new Mensaje("Juan Ive", "¿Qué tal cómo estás?", "15:41"));
-        listaMensajes.add(new Mensaje("Costa de Goria", "¿Qué tal cómo estás?", "15:41"));
-        listaMensajes.add(new Mensaje("Juan Ive", "¿Qué tal cómo estás?", "15:41"));
-        listaMensajes.add(new Mensaje("Costa de Goria", "¿Qué tal cómo estás?", "15:41"));
-        listaMensajes.add(new Mensaje("Hurvin Seary", "¿Qué tal cómo estás?", "10:20"));
-        listaMensajes.add(new Mensaje("Juan Ive", "¿Qué tal cómo estás?", "09:21"));
-        listaMensajes.add(new Mensaje("Víctor Exrixón", "¿Qué tal cómo estás?", "Ayer"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_24, "Hurin Seary", "¿Qué tal cómo estás?", "15:41", "3"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_2_24, "Víctor Exrixón", "¿Qué tal cómo estás?", "15:41", "3"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_24, "surfiya zakir", "¿Qué tal cómo estás?", "Ayer", "1"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_2_24, "Juan Ive", "¿Qué tal cómo estás?", "15:41"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_24, "Costa de Goria", "¿Qué tal cómo estás?", "15:41"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_2_24, "Juan Ive", "¿Qué tal cómo estás?", "15:41"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_24, "Costa de Goria", "¿Qué tal cómo estás?", "15:41"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_2_24, "Hurvin Seary", "¿Qué tal cómo estás?", "10:20"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_24, "Juan Ive", "¿Qué tal cómo estás?", "09:21"));
+        listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_2_24, "Víctor Exrixón", "¿Qué tal cómo estás?", "Ayer"));
     }
 }
 
