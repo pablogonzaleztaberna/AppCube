@@ -15,14 +15,14 @@ public class Resumen {
         this.nombre = nombre;
     }
 
-    public Resumen(int historia, int foto, String nombre) {
-        this.historia = historia;
+    public Resumen(int foto, String nombre) {
         this.foto = foto;
         this.nombre = nombre;
     }
 
-    public Resumen(int foto, String nombre) {
-        this.foto = foto;
+    public Resumen(int historia, String aviso, String nombre) {
+        this.historia = historia;
+        this.aviso = aviso;
         this.nombre = nombre;
     }
 

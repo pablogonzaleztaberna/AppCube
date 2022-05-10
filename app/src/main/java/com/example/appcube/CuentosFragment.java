@@ -79,10 +79,10 @@ public class CuentosFragment extends Fragment {
     }
 
     private void llenarListaResumenes() {
-        listaResumenes.add(new Resumen(R.drawable.dos, "Hurin"));
-        listaResumenes.add(new Resumen(R.drawable.uno, "Hurin"));
-        listaResumenes.add(new Resumen(R.drawable.tres, "Hurin"));
-        listaResumenes.add(new Resumen(R.drawable.dos, "Hurin"));
-        listaResumenes.add(new Resumen(R.drawable.uno, "Hurin"));
+        listaResumenes.add(new Resumen(R.drawable.dos,"Hurin Seary"));
+        listaResumenes.add(new Resumen(R.drawable.uno, "Víctor Exrix"));
+        listaResumenes.add(new Resumen(R.drawable.tres, "surfiya zakir"));
+        listaResumenes.add(new Resumen(R.drawable.dos, "Víctor Exrix"));
+        listaResumenes.add(new Resumen(R.drawable.uno, "Hurin Seary"));
     }
 }

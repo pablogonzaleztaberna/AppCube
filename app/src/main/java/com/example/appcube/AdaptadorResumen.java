@@ -48,7 +48,7 @@ public class AdaptadorResumen extends RecyclerView.Adapter<AdaptadorResumen.Resu
             super(itemView);
 
             //historia = (ImageView) itemView.findViewById(R.id.imgvHistoria);
-            //aviso = (TextView) itemView.findViewById(R.id.aviso);
+            //aviso = (TextView) itemView.findViewById(R.id.enVivo);
             foto = (ImageView) itemView.findViewById(R.id.imgv);
             nombre = (TextView) itemView.findViewById(R.id.nombre);
         }
