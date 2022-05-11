@@ -29,7 +29,6 @@ public class AdaptadorResumen extends RecyclerView.Adapter<AdaptadorResumen.Resu
     @Override
     public void onBindViewHolder(@NonNull AdaptadorResumen.ResumenViewHolder holder, int position) {
         holder.historia.setImageResource(listaResumenes.get(position).getHistoria());
-        //holder.aviso.setText(listaResumenes.get(position).getAviso());
         holder.foto.setImageResource(listaResumenes.get(position).getFoto());
         holder.nombre.setText(listaResumenes.get(position).getNombre());
     }
@@ -48,7 +47,6 @@ public class AdaptadorResumen extends RecyclerView.Adapter<AdaptadorResumen.Resu
             super(itemView);
 
             historia = (ImageView) itemView.findViewById(R.id.imgvHistoria);
-            //aviso = (TextView) itemView.findViewById(R.id.enVivo);
             foto = (ImageView) itemView.findViewById(R.id.imgv);
             nombre = (TextView) itemView.findViewById(R.id.nombre);
         }

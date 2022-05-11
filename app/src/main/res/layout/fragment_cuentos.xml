@@ -59,4 +59,11 @@
             android:layout_below="@+id/txtvCuentos"
             android:layout_marginTop="15dp" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPublicaciones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/recyclerResumenes"
+            android:layout_marginTop="15dp" />
+
 </RelativeLayout>

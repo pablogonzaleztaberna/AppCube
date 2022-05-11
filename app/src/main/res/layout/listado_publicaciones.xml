@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECE4E4" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/imgvPerfil"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Nombre"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Hace 2 horas" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:text="Titulo"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/imgvPost"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_marginTop="75dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/imgvLike"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            app:tint="#D82562"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+        <TextView
+            android:id="@+id/numLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="15dp"
+            android:text="1124"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgvComment"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_baseline_comment_24"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="115dp"
+            app:tint="#AFA8AB"/>
+
+        <TextView
+            android:id="@+id/numComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="77"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="155dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/imgvReport"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_baseline_brightness_high_24"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="50dp"
+            app:tint="#AFA8AB"/>
+
+        <TextView
+            android:id="@+id/numReports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="56"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        </FrameLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

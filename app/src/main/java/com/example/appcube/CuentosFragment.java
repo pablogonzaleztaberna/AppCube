@@ -31,6 +31,9 @@ public class CuentosFragment extends Fragment {
     ArrayList<Resumen> listaResumenes;
     RecyclerView recyclerResumenes;
 
+    ArrayList<Publicacion> listaPublicaciones;
+    RecyclerView recyclerPublicaciones;
+
     public CuentosFragment() {
         // Required empty public constructor
     }
@@ -70,19 +73,33 @@ public class CuentosFragment extends Fragment {
         recyclerResumenes = (RecyclerView) vista.findViewById(R.id.recyclerResumenes);
         recyclerResumenes.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
-        llenarListaResumenes();
+        listaPublicaciones = new ArrayList<>();
+        recyclerPublicaciones = (RecyclerView) vista.findViewById(R.id.recyclerPublicaciones);
+        recyclerPublicaciones.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        AdaptadorResumen adapter = new AdaptadorResumen(listaResumenes);
-        recyclerResumenes.setAdapter(adapter);
+        llenarListaResumenes();
+        llenarListaPublicaciones();
+
+        AdaptadorResumen adapterR = new AdaptadorResumen(listaResumenes);
+        recyclerResumenes.setAdapter(adapterR);
+
+        AdaptadorPublicacion adapterP = new AdaptadorPublicacion(listaPublicaciones);
+        recyclerPublicaciones.setAdapter(adapterP);
 
         return vista;
     }
 
     private void llenarListaResumenes() {
         listaResumenes.add(new Resumen(R.drawable.ic_baseline_person_2_24, R.drawable.dos, "Hurin Seary"));
-        listaResumenes.add(new Resumen(R.drawable.ic_baseline_person_24, R.drawable.uno, "Víctor Exrix"));
+        listaResumenes.add(new Resumen(R.drawable.ic_baseline_person_2_24, R.drawable.uno, "Víctor Exrix"));
         listaResumenes.add(new Resumen(R.drawable.ic_baseline_person_2_24, R.drawable.tres, "surfiya zakir"));
-        listaResumenes.add(new Resumen(R.drawable.ic_baseline_person_24, R.drawable.dos,"Víctor Exrix"));
+        listaResumenes.add(new Resumen(R.drawable.ic_baseline_person_2_24, R.drawable.dos,"Víctor Exrix"));
         listaResumenes.add(new Resumen(R.drawable.ic_baseline_person_2_24, R.drawable.uno,"Hurin Seary"));
+    }
+
+    private void llenarListaPublicaciones() {
+        listaPublicaciones.add(new Publicacion(R.drawable.ic_baseline_person_2_24, R.drawable.uno, "eduardo kelly", "Implementación de tecnologías para almacenar datos inalterables en base a datos específicos."));
+        listaPublicaciones.add(new Publicacion(R.drawable.ic_baseline_person_2_24, R.drawable.dos, "Víctor Exrix", "Implementación de tecnologías para almacenar datos inalterables en base a datos específicos."));
+        listaPublicaciones.add(new Publicacion(R.drawable.ic_baseline_person_2_24, R.drawable.tres, "Hurin Seary", "Implementación de tecnologías para almacenar datos inalterables en base a datos específicos."));
     }
 }

@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1715" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.1715" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.1715" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_cuentos.xml" value="0.13949275362318841" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_home.xml" value="0.19" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_amigos.xml" value="0.21" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_amigos_conectados.xml" value="0.1" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_mensajes.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_publicaciones.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_resumenes.xml" value="0.22" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/menu/bottom_navigation.xml" value="0.20416666666666666" />
