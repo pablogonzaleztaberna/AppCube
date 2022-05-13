@@ -21,8 +21,14 @@ public class PerfilFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    ArrayList<PublicacionPerfil> listaPublicacionesPerfil;
-    RecyclerView recyclerPublicacionesPerfil;
+    //ArrayList<InfoPerfil> listaInfoPerfil;
+    //RecyclerView recyclerInfoPerfil;
+
+    ArrayList<DatosPerfil> listaDatosPerfil;
+    RecyclerView recyclerDatosPerfil;
+
+    //ArrayList<Publicacion> listaPublicaciones;
+    //RecyclerView recyclerPublicacionesPerfil;
 
     public PerfilFragment() {
         // Required empty public constructor
@@ -60,21 +66,43 @@ public class PerfilFragment extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_perfil, container, false);
 
-        listaPublicacionesPerfil = new ArrayList<>();
-        recyclerPublicacionesPerfil = (RecyclerView) vista.findViewById(R.id.recyclerPublicacionesPerfil);
-        recyclerPublicacionesPerfil.setLayoutManager(new LinearLayoutManager(getContext()));
+        //listaInfoPerfil = new ArrayList<>();
+        //recyclerInfoPerfil = (RecyclerView) vista.findViewById(R.id.recyclerInfoPerfil);
+        //recyclerInfoPerfil.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        llenarListaPublicacionesPerfil();
+        listaDatosPerfil = new ArrayList<>();
+        recyclerDatosPerfil = (RecyclerView) vista.findViewById(R.id.recyclerDatosPerfil);
+        recyclerDatosPerfil.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        AdaptadorPerfil adapter = new AdaptadorPerfil(listaPublicacionesPerfil);
-        recyclerPublicacionesPerfil.setAdapter(adapter);
+        //listaPublicaciones = new ArrayList<>();
+        //recyclerPublicacionesPerfil = (RecyclerView) vista.findViewById(R.id.recyclerPublicacionesPerfil);
+        //recyclerPublicacionesPerfil.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        //llenarListaInfo();
+        llenarListaDatos();
+        //llenarListaPublicaciones();
+
+        //AdaptadorInfoPerfil adapterI = new AdaptadorInfoPerfil(listaInfoPerfil);
+        //recyclerInfoPerfil.setAdapter(adapterI);
+
+        AdaptadorDatosPerfil adapterD = new AdaptadorDatosPerfil(listaDatosPerfil);
+        recyclerDatosPerfil.setAdapter(adapterD);
+
+        //AdaptadorPublicacion adapterP = new AdaptadorPublicacion(listaPublicaciones);
+        //recyclerPublicacionesPerfil.setAdapter(adapterP);
 
         return vista;
     }
 
-    private void llenarListaPublicacionesPerfil() {
-        listaPublicacionesPerfil.add(new PublicacionPerfil(R.drawable.ic_baseline_person_2_24, R.drawable.uno, "eduardo kelly", "Implementación de tecnologías para almacenar datos inalterables en base a datos específicos."));
-        listaPublicacionesPerfil.add(new PublicacionPerfil(R.drawable.ic_baseline_person_2_24, R.drawable.dos, "Víctor Exrix", "Implementación de tecnologías para almacenar datos inalterables en base a datos específicos."));
-        listaPublicacionesPerfil.add(new PublicacionPerfil(R.drawable.ic_baseline_person_2_24, R.drawable.tres, "Hurin Seary", "Implementación de tecnologías para almacenar datos inalterables en base a datos específicos."));
+    /*private void llenarListaInfo() {
+        listaInfoPerfil.add(new InfoPerfil(R.drawable.foto_perfil, "Alicia Maghyn", "@California"));
+    }*/
+
+    private void llenarListaDatos() {
+        listaDatosPerfil.add(new DatosPerfil("76", "22", "166", "1.2k", "Implementación de tecnologías para almacenar datos modificables basados en específicos de tecnologías para almacenar datos basados en específicos para almacenar datos basados en datos basados en específicos de específicos.", R.drawable.dos, R.drawable.uno, R.drawable.tres, R.drawable.uno, R.drawable.tres, R.drawable.dos, R.drawable.uno, R.drawable.tres));
     }
+
+    /*private void llenarListaPublicaciones() {
+        listaPublicaciones.add(new Publicacion());
+    }*/
 }

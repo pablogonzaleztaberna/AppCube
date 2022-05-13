@@ -9,290 +9,134 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/perfil">
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="600dp"
-        android:layout_height="400dp"
-        android:background="@drawable/foto_portada"
-        android:layout_gravity="center_horizontal">
-
-        <TextView
-            android:id="@+id/txtvPerfil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="18dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/perfil"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="162dp"
-            tools:layout_editor_absoluteY="46dp" />
-
-        <ImageView
-            android:id="@+id/imageButton"
-            android:layout_width="32dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="15dp"
-            android:contentDescription="back"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
-            app:tint="#FFFFFF"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="46dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:background="#ECE4E4">
 
         <FrameLayout
-            android:layout_width="375dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center_horizontal|center"
-            android:layout_marginTop="60dp"
-            android:background="#FFFFFF">
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
-                android:layout_gravity="bottom"
-                app:srcCompat="@drawable/foto_perfil" />
-        </FrameLayout>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="275dp"
-        android:layout_marginTop="312dp"
-        android:background="#ECE4E4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout">
-
-        <FrameLayout
-            android:id="@+id/datos_perfil"
-            android:layout_width="375dp"
-            android:layout_height="130dp"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
             android:layout_gravity="center_horizontal"
-            android:background="#FFFFFF">
+            android:background="@drawable/foto_portada">
 
             <TextView
-                android:id="@+id/nombre_perfil"
+                android:id="@+id/txtvPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="Alicia Maghyn"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:text="@string/perfil"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/usuario_perfil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
-                android:layout_marginTop="35dp"
-                android:layout_marginBottom="2dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="@California"
-                android:textColor="#CFCACA"
-                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/imageButton"
+                android:layout_width="32dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="back"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:tint="#FFFFFF" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="375dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="170dp"
+                android:background="#FFFFFF">
 
                 <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="top"
-                    android:layout_marginStart="90dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="0.5"
-                    app:srcCompat="@drawable/icon_facebook" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="0dp"
-                    android:layout_height="55dp"
-                    android:layout_gravity="top"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="0.6"
-                    app:srcCompat="@drawable/pinterest" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginRight="110dp"
-                    android:layout_weight="0.5"
-                    android:backgroundTint="#FF0000"
-                    android:text="SEGUIR" />
-
-            </LinearLayout>
+                    android:id="@+id/fotoPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:src="@drawable/foto_perfil" />
+            </FrameLayout>
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/numeros_perfil"
-            android:layout_width="375dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginBottom="0dp"
-            android:background="#FFFFFF">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="30dp"
-                    app:srcCompat="@drawable/ic_baseline_grid_view_24"
-                    app:tint="#CFCACA" />
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="bottom"
-                    app:srcCompat="@drawable/ic_baseline_person_24"
-                    app:tint="#CFCACA" />
-
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="bottom"
-                    app:srcCompat="@drawable/ic_baseline_chat_24"
-                    app:tint="#CFCACA" />
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="bottom"
-                    app:srcCompat="@drawable/ic_baseline_favorite_border_24"
-                    app:tint="#CFCACA" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="45dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="80dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="30dp"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="76"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="34sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="80dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="22"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="34sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="80dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="166"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="34sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="80dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="1.2k"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="34sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="57dp"
-                android:layout_gravity="bottom"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="105dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="PUBLICACIONES"
-                    android:textColor="#CFCACA" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="SEGUIDOR"
-                    android:textColor="#CFCACA" />
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="105dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="8dp"
-                    android:text="COMENTARIOS"
-                    android:textColor="#CFCACA" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="8dp"
-                    android:text="GUSTOS"
-                    android:textColor="#CFCACA" />
-            </LinearLayout>
-        </FrameLayout>
-    </FrameLayout>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerPublicacionesPerfil"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="600dp" />
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal|center"
+            android:background="#ECE4E4">
+
+            <FrameLayout
+                android:layout_width="375dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal|top"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/nombreUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nombre"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/idUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="ID"
+                    android:textColor="#CFCACA"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/icon_facebook" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.6"
+                        android:src="@drawable/pinterest" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="110dp"
+                        android:layout_weight="0.5"
+                        android:backgroundTint="#FF0000"
+                        android:text="SEGUIR" />
+
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerDatosPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="430dp"/>
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

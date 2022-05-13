@@ -22,7 +22,7 @@ public class AdaptadorPerfil extends RecyclerView.Adapter<AdaptadorPerfil.Perfil
     @NonNull
     @Override
     public AdaptadorPerfil.PerfilViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.listado_info_perfil, null, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.listado_datos_perfil, null, false);
         return new AdaptadorPerfil.PerfilViewHolder(view);
     }
 
