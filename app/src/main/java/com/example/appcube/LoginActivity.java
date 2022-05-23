@@ -1,5 +1,9 @@
 package com.example.appcube;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,29 +42,24 @@ public class LoginActivity extends AppCompatActivity {
     EditText editTxtNombreLogin, editTxtContraLogin;
     Button btnLogin, btnGoogle;
     private FirebaseAuth mAuth;
-    private static final int RC_SIGN_IN = 100;
+    private GoogleSignInOptions googleSignInOptions;
     private GoogleSignInClient googleSignInClient;
-    String TAG = "GoogleSignInLoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        /*GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-
-        googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions);
+        googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        googleSignInClient = GoogleSignIn.getClient(this,googleSignInOptions);
+        btnGoogle = (Button) findViewById(R.id.btnGoogle);
 
         btnGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                googleSignInClient.signOut();
-                googleSignInClient.getSignInIntent();
+                signIn();
             }
-        });*/
+        });
 
         txtvRestContra = (TextView) findViewById(R.id.txtvRestContra);
         txtvInscribirseLogin = (TextView) findViewById(R.id.txtvInscribirseLogin);
@@ -68,7 +67,6 @@ public class LoginActivity extends AppCompatActivity {
         editTxtNombreLogin = (EditText) findViewById(R.id.editTxtNombreLogin);
         editTxtContraLogin = (EditText) findViewById(R.id.editTxtContraLogin);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-        btnGoogle = (Button) findViewById(R.id.btnGoogle);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -95,47 +93,32 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    void signIn() {
+        Intent i = googleSignInClient.getSignInIntent();
+        startActivityForResult(i, 1000);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == RC_SIGN_IN) {
+        if (requestCode == 1000) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            if (task.isSuccessful()) {
-                try {
-                    GoogleSignInAccount account = task.getResult(ApiException.class);
-                    Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
-                    firebaseAuthWithGoogle(account.getIdToken());
-                }
-                catch (ApiException e) {
-                    Log.w(TAG, "Google sign in failed", e);
-                }
-            }
-            else {
-                Log.d(TAG, "Error en el login: " + task.getException().toString());
-                Toast.makeText(this, "Ocurrió un error: " + task.getException().toString(), Toast.LENGTH_SHORT).show();
+
+            try {
+                task.getResult(ApiException.class);
+                navigateToSecondActivity();
+            } catch (ApiException e) {
+                Toast.makeText(getApplicationContext(), "Algo fue mal", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private void firebaseAuthWithGoogle(String idToken) {
-        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
-        mAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Log.d(TAG, "signInWithCredential:success");
-
-                    Intent i = new Intent(LoginActivity.this, HomeActivity.class);
-                    startActivity(i);
-                    LoginActivity.this.finish();
-                }
-                else {
-                    Log.w(TAG, "signInWithCredential:failure", task.getException());
-                }
-            }
-        });
+    void navigateToSecondActivity() {
+        finish();
+        Intent i = new Intent(LoginActivity.this, SecondActivity.class);
+        startActivity(i);
     }
+
 
     public void irRestablecer(View view) {
         Intent rest = new Intent(this, RestablecerActivity.class);
