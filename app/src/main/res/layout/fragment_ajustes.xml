@@ -20,7 +20,7 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/btnBack"
             android:layout_width="50dp"
             android:layout_height="48dp"
             android:layout_marginStart="10dp"

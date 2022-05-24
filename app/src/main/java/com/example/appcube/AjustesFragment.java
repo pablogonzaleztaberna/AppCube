@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class AjustesFragment extends Fragment {
     private String mParam2;
 
     TextView txtvDesconectar;
+    ImageButton btnBack;
 
     public AjustesFragment() {
         // Required empty public constructor
@@ -66,6 +68,7 @@ public class AjustesFragment extends Fragment {
         View vista = inflater.inflate(R.layout.fragment_ajustes, container, false);
 
         txtvDesconectar = (TextView) vista.findViewById(R.id.txtvDesconectar);
+        btnBack = (ImageButton) vista.findViewById(R.id.btnBack);
 
         txtvDesconectar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +78,17 @@ public class AjustesFragment extends Fragment {
             }
         });
 
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         return vista;
+    }
+
+    public void onBackPressed() {
+        onBackPressed();
     }
 }
