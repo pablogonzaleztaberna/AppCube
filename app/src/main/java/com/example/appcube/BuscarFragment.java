@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
+
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import java.util.ArrayList;
+import java.util.Locale;
 
-public class BuscarFragment extends Fragment {
+public class BuscarFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     /**
      * A simple {@link Fragment} subclass.
@@ -25,8 +28,10 @@ public class BuscarFragment extends Fragment {
         private String mParam1;
         private String mParam2;
 
+        SearchView svAmigos;
         ArrayList<Amigo> listaAmigos;
         RecyclerView recyclerAmigos;
+        AdaptadorAmigo adapter;
 
         public BuscarFragment() {
             // Required empty public constructor
@@ -63,13 +68,17 @@ public class BuscarFragment extends Fragment {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View vista = inflater.inflate(R.layout.fragment_buscar, container, false);
+
             listaAmigos = new ArrayList<>();
             recyclerAmigos = (RecyclerView) vista.findViewById(R.id.recyclerId);
             recyclerAmigos.setLayoutManager(new LinearLayoutManager(getContext()));
 
+            svAmigos = (SearchView) vista.findViewById(R.id.svAmigos);
+            svAmigos.setOnQueryTextListener(this);
+
             llenarListado();
 
-            AdaptadorAmigo adapter = new AdaptadorAmigo(listaAmigos);
+            adapter = new AdaptadorAmigo(listaAmigos);
             recyclerAmigos.setAdapter(adapter);
 
             return vista;
@@ -87,4 +96,15 @@ public class BuscarFragment extends Fragment {
             listaAmigos.add(new Amigo("Costa de Goria", "¿Qué tal cómo estás?", "Siguiente", R.drawable.ic_baseline_person_2_24));
             listaAmigos.add(new Amigo("Hurin Seary", "¿Qué tal cómo estás?", "Dejar de Seguir", R.drawable.ic_baseline_person_24));
         }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
     }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        adapter.filtrar(s);
+        return false;
+    }
+}

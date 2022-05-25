@@ -31,7 +31,7 @@
         app:tint="#000000" />
 
     <SearchView
-        android:id="@+id/searchView"
+        android:id="@+id/svAmigos"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtvAmigos"
