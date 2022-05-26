@@ -75,6 +75,7 @@ public class AjustesFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
+                System.exit(0);
             }
         });
 
