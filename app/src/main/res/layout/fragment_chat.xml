@@ -38,7 +38,7 @@
         android:layout_marginTop="125dp" />
 
     <SearchView
-        android:id="@+id/searchView"
+        android:id="@+id/svChat"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/recyclerAmigos"

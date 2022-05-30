@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
+
 import java.util.ArrayList;
 
 /**
@@ -15,7 +17,7 @@ import java.util.ArrayList;
  * Use the {@link ChatFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ChatFragment extends Fragment {
+public class ChatFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,10 +28,12 @@ public class ChatFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    SearchView svChat;
     ArrayList<AmigoConectado> listaAmigosConectados;
     RecyclerView recyclerAmigosConectados;
     ArrayList<Mensaje> listaMensajes;
     RecyclerView recyclerMensajes;
+    AdaptadorMensaje adapter;
 
     public ChatFragment() {
         // Required empty public constructor
@@ -74,14 +78,17 @@ public class ChatFragment extends Fragment {
         recyclerMensajes = (RecyclerView) vista.findViewById(R.id.recyclerMensajes);
         recyclerMensajes.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        svChat = (SearchView) vista.findViewById(R.id.svChat);
+        svChat.setOnQueryTextListener(this);
+
         llenarListaAmigosConectados();
         llenarListaMensajes();
 
         AdaptadorAmigoConectado adapterAC = new AdaptadorAmigoConectado(listaAmigosConectados);
         recyclerAmigosConectados.setAdapter(adapterAC);
 
-        AdaptadorMensaje adapterM = new AdaptadorMensaje(listaMensajes);
-        recyclerMensajes.setAdapter(adapterM);
+        adapter = new AdaptadorMensaje(listaMensajes);
+        recyclerMensajes.setAdapter(adapter);
 
         return vista;
     }
@@ -110,6 +117,18 @@ public class ChatFragment extends Fragment {
         listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_2_24, "Hurvin Seary", "¿Qué tal cómo estás?", "10:20"));
         listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_24, "Juan Ive", "¿Qué tal cómo estás?", "09:21"));
         listaMensajes.add(new Mensaje(R.drawable.ic_baseline_person_2_24, "Víctor Exrixón", "¿Qué tal cómo estás?", "Ayer"));
+    }
+
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        adapter.filtrar(s);
+        return false;
     }
 }
 

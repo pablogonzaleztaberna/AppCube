@@ -10,13 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class AdaptadorMensaje extends RecyclerView.Adapter<AdaptadorMensaje.MensajeViewHolder> {
 
     ArrayList<Mensaje> listaMensajes;
+    ArrayList<Mensaje> listaOriginal;
 
     public AdaptadorMensaje(ArrayList<Mensaje> listaMensajes) {
         this.listaMensajes = listaMensajes;
+        listaOriginal = new ArrayList<>();
+        listaOriginal.addAll(listaMensajes);
     }
 
     @NonNull
@@ -33,6 +38,29 @@ public class AdaptadorMensaje extends RecyclerView.Adapter<AdaptadorMensaje.Mens
         holder.mensaje.setText(listaMensajes.get(position).getMensaje());
         holder.hora.setText(listaMensajes.get(position).getHora());
         holder.numMensajes.setText(listaMensajes.get(position).getNumMensajes());
+    }
+
+    public void filtrar(String txtBuscar) {
+        int longitud = txtBuscar.length();
+        if (longitud == 0) {
+            listaMensajes.clear();
+            listaMensajes.addAll(listaOriginal);
+        } else {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                List<Mensaje> coleccion = listaMensajes.stream().filter(i -> i.getNombre().toLowerCase()
+                        .contains(txtBuscar.toLowerCase())).collect(Collectors.toList());
+                listaMensajes.clear();
+                listaMensajes.addAll(coleccion);
+            } else {
+                for (Mensaje mensaje : listaOriginal) {
+                    if (mensaje.getNombre().toLowerCase().contains(txtBuscar.toLowerCase())) {
+                        listaMensajes.clear();
+                        listaMensajes.add(mensaje);
+                    }
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 
     @Override
