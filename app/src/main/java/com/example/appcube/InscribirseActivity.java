@@ -3,7 +3,9 @@ package com.example.appcube;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,6 +75,19 @@ public class InscribirseActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), "REGISTRO CON ÉXITO!", Toast.LENGTH_LONG).show();
+                        mAuth.signInWithEmailAndPassword(inputNombre, inputContra1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(), "LOGIN CON ÉXITO!", Toast.LENGTH_LONG).show();
+
+                                    Intent inicio = new Intent(getApplicationContext(), HomeActivity.class);
+                                    startActivity(inicio);
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "ERROR EN EL LOGIN", Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
                     } else {
                         Toast.makeText(getApplicationContext(), "ERROR EN EL REGISTR0", Toast.LENGTH_LONG).show();
                     }
