@@ -10,7 +10,7 @@
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_home.xml" value="0.19" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_inscribirse.xml" value="0.21" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_restablecer.xml" value="0.22" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/activity_second.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/datos_perfil.xml" value="0.25" />
@@ -20,6 +20,7 @@
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_cuentos.xml" value="0.18" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_home.xml" value="0.13949275362318841" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_amigos.xml" value="0.33" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_amigos_conectados.xml" value="0.1" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/AppCube/app/src/main/res/layout/listado_datos_perfil.xml" value="0.20416666666666666" />
