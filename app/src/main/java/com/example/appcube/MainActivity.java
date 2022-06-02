@@ -68,25 +68,45 @@ public class MainActivity extends AppCompatActivity {
             imgv2.setBackgroundResource(R.color.grey);
             imgv3.setBackgroundResource(R.color.grey);
             btnEmpezar.setText("Siguiente");
+            btnEmpezar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    viewPager2.setCurrentItem(1);
+                }
+            });
         }
         else if (viewPager2.getCurrentItem() == 1) {
             imgv1.setBackgroundResource(R.color.grey);
             imgv2.setBackgroundResource(R.color.active);
             imgv3.setBackgroundResource(R.color.grey);
             btnEmpezar.setText("Siguiente");
+            btnEmpezar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    viewPager2.setCurrentItem(2);
+                }
+            });
         }
         else if (viewPager2.getCurrentItem() == 2) {
             imgv1.setBackgroundResource(R.color.grey);
             imgv2.setBackgroundResource(R.color.grey);
             imgv3.setBackgroundResource(R.color.active);
             btnEmpezar.setText("Empezar");
+            btnEmpezar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent login = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(login);
+                }
+            });
         }
     }
 
 
 
+    /*if ()
     public void irLogin(View view) {
         Intent login = new Intent(this, LoginActivity.class);
         startActivity(login);
-    }
+    }*/
 }
